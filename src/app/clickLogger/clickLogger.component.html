@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="onClickLog()">Display Details</button>
+<p *ngIf="displayToggled">PEEKABOOOO</p>
+<hr />
+<p *ngFor="let clickLog of clickLogs"
+  [ngStyle]="{backgroundColor: clickLog >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{white: clickLog >= 5}">
+  {{clickLog}}
+</p>
+<!-- <div *ngFor="let clickLog of clickLogs">
+  <p *ngIf="clickLogs.length < 5; else specialLog">{{ clickLog }}</p>
+  <ng-template #specialLog>
+    <p [ngStyle]="{backgroundColor: 'blue'}" [ngClass]="'white'"></p>
+  </ng-template>
+</div> -->
